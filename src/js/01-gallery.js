@@ -29,7 +29,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   captionPosition: 'bottom',
 });
-
-lightbox.on('show.simplelightbox', function (e) {
-  console.log('Image shown', e);
-});

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Throttle the function to run at most once every 500 milliseconds
-  const throttleUpdateStorage = _.throttle(updateStorage, 500);
+  const throttleUpdateStorage = throttle(updateStorage, 500);
 
   const form = document.querySelector('.feedback-form');
 
