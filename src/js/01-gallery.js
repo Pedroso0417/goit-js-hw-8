@@ -1,10 +1,18 @@
+// 01-gallery.js
+
+// Import SimpleLightbox library
 import SimpleLightbox from 'simplelightbox';
+
+// Import SimpleLightbox styles
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
+// Import gallery items
 import { galleryItems } from './gallery-items.js';
 
-// Change code below this line
-
+// Select the gallery element
 const galleryList = document.querySelector('.gallery');
 
+// Function to create the gallery HTML
 const createGallery = elements => {
   return elements
     .map(({ preview, original, description }) => {
@@ -19,10 +27,13 @@ const createGallery = elements => {
     .join('');
 };
 
+// Generate HTML markup for the gallery
 const photosMarkup = createGallery(galleryItems);
+
+// Insert the gallery markup into the DOM
 galleryList.insertAdjacentHTML('beforeend', photosMarkup);
 
-// Second task //
+// Initialize SimpleLightbox on the gallery links
 const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
   captionsData: 'alt',
