@@ -1,3 +1,5 @@
+import throttle from 'lodash.throttle';
+
 document.addEventListener('DOMContentLoaded', function () {
   // Throttle the function to run at most once every 500 milliseconds
   const throttleUpdateStorage = throttle(updateStorage, 500);
